@@ -1,0 +1,333 @@
+/*
+Kibanafeel - Kibana-Inspired Dark Theme for LibreNMS
+
+Copyright (c) Winston Astrachan 2020
+Released under the terms of the MIT license
+*/
+
+
+:root {
+    --color-dark1: #16171c;
+    --color-dark2: #1a1b20;
+    --color-dark3: #1d1e24;
+    --color-dark4: #343741;
+
+    --color-light1: #707070;
+    --color-light2: #98A2B3;
+    --color-light3: #DFE5EF;
+
+    --color-primary: #1c86e1;
+    --color-primary-light: #1ba9f5;
+    --color-info: #5bc0de;
+    --color-success: #00beb2;
+    --color-danger: #cc3366;
+
+    --shadow-standard: 0 2px 2px -1px rgba(0, 0, 0, 0.3)
+}
+
+
+/* Root Styles */
+body {
+    background-color: var(--color-dark2);
+    color: var(--color-light2);
+}
+a {
+    color: var(--color-primary-light);
+}
+a:hover {
+    color: var(--color-primary-light);
+    text-decoration: underline;
+}
+legend {
+    color: var(--color-light2);
+    border-bottom: 0;
+}
+
+
+/* Form Styles */
+.form-control,
+.devices-graphs-select,
+.select2-container--bootstrap .select2-selection,
+.select2-container--bootstrap .select2-search--dropdown .select2-search__field {
+    background-color: var(--color-dark1);
+    color: var(--color-light3);
+    border-radius: 0;
+    border-color: var(--color-dark4);
+}
+.form-control:focus,
+.devices-graphs-select:focus,
+.select2-container--bootstrap .select2-selection:focus {
+    border-color: var(--color-light1);
+    transition: none;
+    box-shadow: none;
+}
+.btn-default {
+    background-color: var(--color-dark3);
+    color: var(--color-light3);
+    border-color: var(--color-dark4);
+}
+.btn-success {
+    background-color: transparent;
+    color: var(--color-success);
+    border: 1px solid var(--color-dark4);
+}
+.btn-info {
+    background-color: transparent;
+    color: var(--color-info);
+    border: 1px solid var(--color-dark4);
+}
+.btn-success:hover{
+    background-color: transparent;
+    color: var(--color-light3);
+    border: 1px solid var(--color-success);
+}
+.btn-danger {
+    background-color: transparent;
+    color: var(--color-danger);
+    border: 1px solid var(--color-dark4);
+}
+.btn-danger:hover {
+    background-color: transparent;
+    color: var(--color-light3);
+    border: 1px solid var(--color-danger);
+}
+.btn-default:hover,
+.btn-default:active,
+.btn-default:focus,
+.open>.dropdown-toggle.btn-default:focus,
+.open>.dropdown-toggle.btn-default:active,
+.open>.dropdown-toggle.btn-default:hover,
+.open>.dropdown-toggle.btn-default {
+    background-color: var(--color-dark4);
+    color: var(--color-light3);
+    border-color: var(--color-dark4);
+}
+
+.btn-default.disabled,
+.btn-default.disabled:hover,
+.btn-default.disabled:active,
+.btn-default.disabled:focus {
+    background-color: var(--color-dark3);
+    color: var(--color-light2);
+    border-color: var(--color-dark4);
+}
+.input-group-addon {
+    background-color: var(--color-dark2);
+    border: 1px solid var(--color-dark4);
+}
+.select2-container--bootstrap .select2-dropdown {
+    background-color: var(--color-dark3);
+    border: 1px solid var(--color-dark4);
+    box-shadow: var(--shadow-standard);
+}
+.select2-container--bootstrap .select2-results__option--highlighted[aria-selected] {
+    background-color: var(--color-dark2);
+}
+
+
+/* Pagination */
+.pagination>.disabled>a,
+.pagination>.disabled>a:focus,
+.pagination>.disabled>a:hover,
+.pagination>.disabled>span,
+.pagination>.disabled>span:focus,
+.pagination>.disabled>span:hover {
+    background-color: var(--color-dark1);
+    border-color: var(--color-dark4);
+    color: var(--color-light1);
+}
+.pagination>li>a,
+.pagination>li>span {
+    background-color: var(--color-dark1);
+    border-color: var(--color-dark4);
+    color: var(--color-primary-light);
+}
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    background-color: var(--color-dark2);
+    border-color: var(--color-dark4);
+}
+.pagination>li>a:focus,
+.pagination>li>a:hover,
+.pagination>li>span:focus,
+.pagination>li>span:hover {
+    background-color: var(--color-dark2);
+    border-color: var(--color-dark4);
+    color: var(--color-light3);
+}
+
+
+/* Dropdown Menus */
+.dropdown-menu {
+    background-color: var(--color-dark3);
+}
+.dropdown-menu>li>a {
+    background-color: var(--color-dark3);
+    color: var(--color-light2);
+}
+.dropdown-menu .divider {
+    background-color: var(--color-dark4);
+}
+.dropdown-menu>li>a:hover {
+    background-color: var(--color-dark2);
+    color: var(--color-light3);
+}
+
+
+/* Page Navigation */
+nav.navbar {
+    background-color: var(--color-dark3);
+}
+nav.navbar-default {
+    border-color: var(--color-light2);
+    border-bottom: 1px solid var(--color-dark4);
+    box-shadow: var(--shadow-standard);
+}
+nav.navbar-default .navbar-nav>li>a {
+    color: var(--color-light2);
+}
+nav.navbar-default .navbar-nav>.open>a:hover,
+nav.navbar-default .navbar-nav>.open>a,
+nav.navbar-default .navbar-nav>.open>a:focus,
+nav.navbar-default .navbar-nav>li>a:focus {
+    background-color: var(--color-dark2);
+    color: var(--color-light3);
+}
+.fa-nav-icons {
+    color: var(--color-dark4);
+}
+.fa-nav-icons.fa-col-success {
+    color: var(--color-success);
+}
+
+
+/* Nave Tabs */
+.nav-tabs {
+    border-bottom-color: var(--color-dark4);
+}
+.nav-tabs>li>a {
+    color: var(--color-light2);
+    background-color: var(--color-dark2);
+    border-bottom-color: var(--color-dark4);
+}
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+    border-color: var(--color-dark4);
+    color: var(--color-light2);
+    background-color: var(--color-dark3);
+}
+.nav-tabs>li>a:focus,
+.nav-tabs>li>a:hover {
+    border-color: var(--color-dark4);
+    color: var(--color-light2);
+    background-color: var(--color-dark3);
+}
+
+
+/* Dashboards */
+.gridster .gs-w {
+    border-color: var(--color-light2);
+    background-color: var(--color-dark3);
+    border: 1px solid var(--color-dark4);
+    box-shadow: var(--shadow-standard);
+}
+
+.gridster header.widget_header {
+    background-color: var(--color-dark3);
+}
+
+
+/* Panels */
+.panel-default,
+.well {
+    border-color: var(--color-light2);
+    background-color: var(--color-dark3);
+    border: 1px solid var(--color-dark4);
+    border-radius: 2px;
+    box-shadow: var(--shadow-standard);
+}
+.panel-default .panel-heading {
+    background-color: var(--color-dark3);
+    color: var(--color-light3);
+    line-height: 40px;
+    border: 0;
+}
+.panel-default .panel-heading .pagemenu-selected {
+    border: 0;
+    border-radius: 2px;
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 2px solid var(--color-primary);
+}
+.table-striped>tbody>tr:nth-of-type(even),
+.table-striped>tbody>tr:nth-of-type(odd),
+.device-overview>.panel-body>.row:nth-child(even),
+.device-overview>.panel-body>.row:nth-child(odd),
+tr.bgp:nth-child(even),
+tr.bgp:nth-child(odd) {
+    background-color: var(--color-dark3);
+}
+.table>tbody>tr>td,
+.table>tbody>tr>th {
+    border-top: 1px solid var(--color-dark4);
+}
+.table>thead>tr>th {
+    border-bottom: 1px solid var(--color-dark4);
+}
+.bootgrid-table th>.column-header-anchor.sortable {
+    color: var(--color-light2);
+}
+.bootgrid-table th>.column-header-anchor.sortable:hover {
+    color: var(--color-primary);
+}
+.bootgrid-table th:hover {
+    background-color: var(--color-dark3);
+}
+.bootgrid-table td.loading, .bootgrid-table td.no-results {
+    background-color: transparent;
+}
+.device-head, a.list-device {
+    color: var(--color-light3);
+}
+.icon-theme {
+    color: var(--color-light1);
+}
+.device-table-metrics>a {
+    color: var(--color-primary);
+}
+.interface-upup,
+a.interface-upup {
+    color: var(--color-primary);
+}
+a.interface-upup:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+#overDiv {
+    background-color: var(--color-dark2);
+    border: 1px solid var(--color-dark4);
+    box-shadow: var(--shadow-standard);
+}
+.overlib-contents,
+.overlib-box {
+    color: var(--color-light2);
+    background-color: var(--color-dark2);
+}
+
+
+/* Login Page */
+img.logon-logo {
+    max-height: 100px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.panel-footer {
+    background-color: var(--color-dark2);
+    border-top: 1px solid var(--color-dark4);
+}
